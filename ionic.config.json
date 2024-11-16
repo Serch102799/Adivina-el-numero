@@ -1,0 +1,7 @@
+{
+  "name": "shp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
