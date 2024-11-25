@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Conversor de Monedas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding></ion-content>
+  <div class="image-container">
+    <img src="img/moneda.png" alt="Descripción de la imagen">
+  </div>
+
+<ion-content padding>
+  <form (ngSubmit)="convert()">
+    <ion-item>
+      <ion-label position="floating">Dinero</ion-label>
+      <ion-input [(ngModel)]="amount" name="amount" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>De</ion-label>
+      <ion-select [(ngModel)]="fromCurrency" name="fromCurrency" required>
+        <ion-select-option value="MXN">Peso (MXN)</ion-select-option>
+        <ion-select-option value="USD">Dólar (USD)</ion-select-option>
+        <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hasta</ion-label>
+      <ion-select [(ngModel)]="toCurrency" name="toCurrency" required>
+        <ion-select-option value="MXN">Peso (MXN)</ion-select-option>
+        <ion-select-option value="USD">Dólar (USD)</ion-select-option>
+        <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Convertir</ion-button>
+  </form>
+
+  <ion-item *ngIf="result !== null">
+    <ion-label>Resultado</ion-label>
+    <ion-input [value]="result | number:'1.2-2'" readonly></ion-input>
+  </ion-item>
+</ion-content>

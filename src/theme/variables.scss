@@ -1,2 +1,52 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-game: #49929c;
+	--ion-color-game-rgb: 73,146,156;
+	--ion-color-game-contrast: #000000;
+	--ion-color-game-contrast-rgb: 0,0,0;
+	--ion-color-game-shade: #408089;
+	--ion-color-game-tint: #5b9da6;
+
+	--ion-color-game1: #0df9fd;
+	--ion-color-game1-rgb: 13,249,253;
+	--ion-color-game1-contrast: #000000;
+	--ion-color-game1-contrast-rgb: 0,0,0;
+	--ion-color-game1-shade: #0bdbdf;
+	--ion-color-game1-tint: #25fafd;
+
+	--ion-color-red: #ff540a;
+	--ion-color-red-rgb: 255,84,10;
+	--ion-color-red-contrast: #000000;
+	--ion-color-red-contrast-rgb: 0,0,0;
+	--ion-color-red-shade: #e04a09;
+	--ion-color-red-tint: #ff6523;
+}
+
+.ion-color-game {
+	--ion-color-base: var(--ion-color-game);
+	--ion-color-base-rgb: var(--ion-color-game-rgb);
+	--ion-color-contrast: var(--ion-color-game-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-game-contrast-rgb);
+	--ion-color-shade: var(--ion-color-game-shade);
+	--ion-color-tint: var(--ion-color-game-tint);
+}
+
+
+.ion-color-game1 {
+	--ion-color-base: var(--ion-color-game1);
+	--ion-color-base-rgb: var(--ion-color-game1-rgb);
+	--ion-color-contrast: var(--ion-color-game1-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-game1-contrast-rgb);
+	--ion-color-shade: var(--ion-color-game1-shade);
+	--ion-color-tint: var(--ion-color-game1-tint);
+}
+
+.ion-color-red {
+	--ion-color-base: var(--ion-color-red);
+	--ion-color-base-rgb: var(--ion-color-red-rgb);
+	--ion-color-contrast: var(--ion-color-red-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-red-contrast-rgb);
+	--ion-color-shade: var(--ion-color-red-shade);
+	--ion-color-tint: var(--ion-color-red-tint);
+}

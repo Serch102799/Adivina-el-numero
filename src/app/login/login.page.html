@@ -1,0 +1,61 @@
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card mode="ios">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Aivina el número</ion-card-title>
+        <ion-card-subtitle>Bienvenido (a)</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form #frmLogin="ngForm" (ngSubmit)="onClickIngresar(frmLogin)">
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input
+              [(ngModel)]="usuario"
+              name="username"
+              type="text"
+              required
+              #username="ngModel"
+            ></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="username?.invalid && username?.touched">
+            <p *ngIf="username?.errors?.['required']">EL campo no puede estar vacio.</p>
+          </ion-text>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input
+              [(ngModel)]="password"
+              name="password"
+              type="password"
+              required
+              #passwordField="ngModel"
+            ></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="passwordField?.invalid && passwordField?.touched">
+            <p *ngIf="passwordField?.errors?.['required']">EL campo no puede estar vacio.</p>
+          </ion-text>
+
+          <br />
+
+          <ion-button
+            type="submit"
+            expand="block"
+            color="game"
+            [disabled]="frmLogin.invalid"
+          >
+            Ingresar
+          </ion-button>
+        </form>
+
+        <div class="register-link">
+          <ion-label>
+            ¿No tienes cuenta?
+            <a routerLink="/register">Regístrate aquí</a>
+          </ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

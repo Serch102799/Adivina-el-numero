@@ -1,0 +1,56 @@
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.leaderboard-item {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.leaderboard-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: #84e9dd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.leaderboard-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.leaderboard-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.leaderboard-points {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ff5722;
+}
+
+ion-label {
+  font-size: 16px;
+  color: #333;
+}
+
+ion-note {
+  font-size: 18px;
+  color: #333;
+}
+
+ion-item {
+  padding: 0;
+}
